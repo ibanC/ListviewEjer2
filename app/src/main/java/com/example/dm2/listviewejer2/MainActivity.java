@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 new Titular("WTA", "http://www.es.wtatennis.com"),
                 new Titular("WhatsApp", "https://www.whatsapp.com"),
         };
-        /*imagenes = new int[]{
+        imagenes = new int[]{
                 R.drawable.google,
                 R.drawable.marca,
                 R.drawable.as,
@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.atp,
                 R.drawable.wta,
                 R.drawable.whatsapp,
-        };*/
+        };
 
-AdaptadorTitulares adaptador=new AdaptadorTitulares(this,datos);/*imagenes*/
+AdaptadorTitulares adaptador=new AdaptadorTitulares(this,datos,imagenes);/*imagenes*/
         lstwebs.setAdapter(adaptador);
 
         lstwebs.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -13,7 +13,7 @@ public class AdaptadorTitulares extends ArrayAdapter<Titular> {
 
   private Titular[] datos;
     private int[] imagenes;
-  public AdaptadorTitulares(Context context, Titular[] datos/*,int[] imagenes*/) {
+  public AdaptadorTitulares(Context context, Titular[] datos,int[] imagenes) {
         super(context, R.layout.listitem_titular, datos);
       this.datos=datos;
       this.imagenes=imagenes;
@@ -29,8 +29,8 @@ public class AdaptadorTitulares extends ArrayAdapter<Titular> {
         TextView lblSubtitulo = (TextView)item.findViewById(R.id.LblSubTitulo);
         lblSubtitulo.setText(datos[position].getSubtitulo());
 
-       /*ImageView imgImg = (ImageView) item.findViewById(R.id.list_row_image);
-        imgImg.setImageResource(imagenes[position]);*/
+       ImageView imgImg = (ImageView) item.findViewById(R.id.list_row_image);
+        imgImg.setImageResource(imagenes[position]);
         return(item);
     }
 }
